@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  database:
+    image: 'postgres:latest'
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - DATABASE_HOST=127.0.0.1
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=Az481526
+      - POSTGRES_DB=root
+
+  
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=Az481526
+    ports:
+      - 80:80
+    depends_on:
+      - database
