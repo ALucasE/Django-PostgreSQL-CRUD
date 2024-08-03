@@ -79,7 +79,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "tasksdb",
         "USER": "root",
-        "PASSWORD": "Az481526",
+        "PASSWORD": "",
         "HOST": "localhost",
         "POST": "5432",
     }
